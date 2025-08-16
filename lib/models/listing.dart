@@ -49,6 +49,8 @@ class Listing {
         location: 'Manali',
         imageUrls: [
           'assets/images/cozy_cabin.jpeg',
+          'assets/images/cabin3.jpg',
+          'assets/images/cabin7.jpg',
         ],
         rating: 4.5,
         pricePerNight: 3500,
@@ -60,11 +62,36 @@ class Listing {
         location: 'Shimla',
         imageUrls: [
           'assets/images/mountain_cabin.jpeg',
+          'assets/images/cabin4.jpg',
         ],
         rating: 4.6,
         pricePerNight: 4000,
         category: 'Cabins',
         distanceKm: 6.0,
+      ),
+      Listing(
+        title: 'Mountain Cabin in the Woods',
+        location: 'Manali',
+        imageUrls: [
+          'assets/images/cabin2.jpg',
+          'assets/images/cabin5.jpg',
+        ],
+        rating: 4.5,
+        pricePerNight: 3500,
+        category: 'Cabins',
+        distanceKm: 5.0,
+      ),
+      Listing(
+        title: 'Cabin in the Woods',
+        location: 'Nainital',
+        imageUrls: [
+          'assets/images/cabin1.jpg',
+          'assets/images/cabin7.jpg',
+        ],
+        rating: 4.5,
+        pricePerNight: 3500,
+        category: 'Cabins',
+        distanceKm: 5.0,
       ),
 
       // Trending
@@ -73,6 +100,8 @@ class Listing {
         location: 'Mumbai',
         imageUrls: [
           'assets/images/trending_apartment.jpeg',
+          'assets/images/trending2.jpeg',
+          'assets/images/trending3.jpeg',
         ],
         rating: 4.3,
         pricePerNight: 4500,
@@ -84,11 +113,24 @@ class Listing {
         location: 'Bengaluru',
         imageUrls: [
           'assets/images/city_loft.png',
+          'assets/images/trending4.jpeg',
         ],
         rating: 4.4,
         pricePerNight: 4800,
         category: 'Trending',
         distanceKm: 2.0,
+      ),
+      Listing(
+        title: 'Popular City',
+        location: 'Hyderabad',
+        imageUrls: [
+          'assets/images/trending2.jpeg',
+          'assets/images/trending5.jpeg',
+        ],
+        rating: 4.4,
+        pricePerNight: 8800,
+        category: 'Trending',
+        distanceKm: 5.0,
       ),
 
       // Countryside
@@ -105,14 +147,29 @@ class Listing {
       ),
       Listing(
         title: 'Peaceful Farmhouse',
-        location: 'Jaipur',
+        location: 'Nainital',
         imageUrls: [
           'assets/images/peaceful_farmhouse.jpeg',
+          'assets/images/country1.jpeg',
+          'assets/images/country4.jpeg',
         ],
         rating: 4.7,
-        pricePerNight: 6500,
+        pricePerNight: 5500,
         category: 'Countryside',
-        distanceKm: 8.5,
+        distanceKm: 5.5,
+      ),
+      Listing(
+        title: 'Peaceful Farmhouse',
+        location: 'Hyderabad',
+        imageUrls: [
+          'assets/images/country2.jpg',
+          'assets/images/country3.jpeg',
+          'assets/images/country5.jpeg',
+        ],
+        rating: 4.7,
+        pricePerNight: 8500,
+        category: 'Countryside',
+        distanceKm: 9.5,
       ),
 
       // Amazing pools
@@ -121,6 +178,8 @@ class Listing {
         location: 'Jaipur',
         imageUrls: [
           'assets/images/amazing_pool_villa.jpeg',
+          'assets/images/pool2.jpeg',
+          'assets/images/pool3.jpeg',
         ],
         rating: 4.7,
         pricePerNight: 7000,
@@ -132,6 +191,30 @@ class Listing {
         location: 'Goa',
         imageUrls: [
           'assets/images/infinity_pool_retreat.jpg',
+          'assets/images/pool4.jpeg',
+          'assets/images/pool5.jpg',
+        ],
+        rating: 4.8,
+        pricePerNight: 7500,
+        category: 'Amazing pools',
+        distanceKm: 3.2,
+      ),
+      Listing(
+        title: 'Infinity Pool',
+        location: 'Kanpur',
+        imageUrls: [
+          'assets/images/pool.jpg',
+        ],
+        rating: 4.8,
+        pricePerNight: 3500,
+        category: 'Amazing pools',
+        distanceKm: 3.8,
+      ),
+      Listing(
+        title: ' Pool Retreat',
+        location: 'Lucknow',
+        imageUrls: [
+          'assets/images/pool1.jpeg',
         ],
         rating: 4.8,
         pricePerNight: 7500,
