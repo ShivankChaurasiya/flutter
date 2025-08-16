@@ -33,12 +33,28 @@ class _LoginScreenState extends State<LoginScreen> {
                   CrossAxisAlignment.center, // horizontal center
               children: [
                 Image.asset(
-                  'assets/images/logo.jpg', // your logo path
+                  'assets/images/airbnb.png', // your logo path
                   height: 100, // adjust size
+                  errorBuilder: (context, error, stackTrace) {
+                    print('Error loading image: $error');
+                    return Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Icon(
+                        Icons.image_not_supported,
+                        size: 50,
+                        color: Colors.grey,
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 20), // spacing
                 Text(
-                  'Welcome to Staybnb',
+                  'Welcome to Airbnb',
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium
