@@ -17,5 +17,6 @@
         "windows"
     ],
     "dart.warnWhenEditingFilesOutsideWorkspace": false,
-    "dart.warnWhenEditingFilesInPubCache": false
+    "dart.warnWhenEditingFilesInPubCache": false,
+    "cmake.sourceDirectory": "C:/airbnb_guest_clone_flutter/airbnb_guest_clone_flutter/linux"
 }
