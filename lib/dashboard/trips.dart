@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/listing.dart';
 import '../dashboard/explore.dart'; // For ListingCard
 import '../listing/listing_detail_screen.dart';
+import 'search_bar.dart';
 
 class TripsPage extends StatefulWidget {
   const TripsPage({super.key});
@@ -11,46 +12,19 @@ class TripsPage extends StatefulWidget {
 }
 
 class _TripsPageState extends State<TripsPage> {
-  String searchQuery = ''; // Store search text
-
   @override
   Widget build(BuildContext context) {
-    // Filter listings based on search query
-    final listings = Listing.getMockListings()
-        .where((listing) =>
-            listing.title.toLowerCase().contains(searchQuery.toLowerCase()))
-        .toList();
+    final listings = Listing.getMockListings();
 
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('Trips'),
+        title: const CustomSearchBar(),
         surfaceTintColor: Colors.transparent,
+        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.tune))],
       ),
       body: Column(
         children: [
-          // Search Bar
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: TextField(
-              onChanged: (value) {
-                setState(() {
-                  searchQuery = value;
-                });
-              },
-              decoration: InputDecoration(
-                hintText: 'Search your trips...',
-                prefixIcon: const Icon(Icons.search),
-                filled: true,
-                fillColor: Colors.grey[200],
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
-          ),
-
           // Trips List
           Expanded(
             child: ListView.separated(

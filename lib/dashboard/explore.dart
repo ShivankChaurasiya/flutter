@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/listing.dart';
 import '../listing/listing_detail_screen.dart';
+import 'search_bar.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});
@@ -10,46 +11,18 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  String searchQuery = ''; // Store search text
-
   @override
   Widget build(BuildContext context) {
-    // Filter listings based on search query
-    final listings = Listing.getMockListings()
-        .where((listing) =>
-            listing.title.toLowerCase().contains(searchQuery.toLowerCase()))
-        .toList();
+    final listings = Listing.getMockListings();
 
     return Scaffold(
       appBar: AppBar(
         surfaceTintColor: Colors.transparent,
-        title: const Text('Explore'),
+        title: const CustomSearchBar(),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.tune))],
       ),
       body: Column(
         children: [
-          // Search Bar
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: TextField(
-              onChanged: (value) {
-                setState(() {
-                  searchQuery = value;
-                });
-              },
-              decoration: InputDecoration(
-                hintText: 'Search listings...',
-                prefixIcon: const Icon(Icons.search),
-                filled: true,
-                fillColor: Colors.grey[200],
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
-          ),
-
           // Category Chips
           const _CategoryChips(),
 
